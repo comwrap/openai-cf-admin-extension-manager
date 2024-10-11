@@ -1,0 +1,24 @@
+operations:
+  view:
+    - type: web
+      impl: index.html
+actions: actions
+web: web-src
+hooks:
+  post-app-deploy: ./hooks/post-deploy.js
+runtimeManifest:
+  packages:
+    aem-cf-console-admin-1:
+      license: Apache-2.0
+      actions:
+        generate-image:
+          function: actions/generate-image/index.js
+          web: 'yes'
+          runtime: nodejs:16
+          inputs:
+            LOG_LEVEL: debug
+            OPENAI_API_KEY: $OPENAI_API_KEY
+            GENERATED_IMAGES_DAM_PATH: '/content/dam/wknd-shared/en/generated'
+          annotations:
+            require-adobe-auth: false
+            final: true
