@@ -8,12 +8,16 @@ This extension connects AEM to a third-party Generative AI (GenAI) service, spec
 
 - **Action Button in Content Fragment Console**: Easily access the image generation feature directly from the AEM Content Fragment Console.
   ![action button](images/action-button-in-cf-admin.png)
+
 - **User Prompt Modal**: A user-friendly modal for entering prompts to generate images.
   ![user prompt modal](images/user-prompt-modal.png)
+
 - **Serverless Functionality**:
   - Generates an image through the third-party GenAI.
+  
   - Uploads the generated asset to AEM Assets.
     ![generate and upload image to AEM](images/generate-image.png)
+
   - Links the asset to the relevant Content Fragment.
     ![link asset to content fragment](images/link-asset-to-cf.png)
 
